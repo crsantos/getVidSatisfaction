@@ -15,7 +15,7 @@ urlpatterns = patterns('',
 	# (r'^satisfaction_site/', include('satisfaction_site.foo.urls')),
 
 	# ADMIN
-	(r'^admin/', include(admin.site.urls)),
+	(r'^admin/', admin.site.root),
 
 	#Browsing
 	(r'^$', index), # null string = main-page
