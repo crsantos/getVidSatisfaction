@@ -76,7 +76,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
 )
 
-ROOT_URLCONF = 'satisfaction_site.urls'
+ROOT_URLCONF = os.path.join(os.path.dirname(__file__)+'.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -90,6 +90,6 @@ INSTALLED_APPS = (
 	'django.contrib.contenttypes',
 	'django.contrib.sessions',
 	'django.contrib.sites',
-	'satisfaction_site.satisfaction',
+	os.path.join(os.path.dirname(__file__)+'.satisfaction',
 	'django.contrib.admin',
 	'django.contrib.comments',)
