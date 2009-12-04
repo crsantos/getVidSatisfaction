@@ -1,0 +1,22 @@
+{% extends "satisfaction/base.html" %}
+
+{% block title %}Save Playlist{% endblock %}
+
+{% block external %}
+	  <link rel="stylesheet" href="/site_media/css/jquery.autocomplete.css" type="text/css" /> 
+	  <script type="text/javascript" src="/site_media/js/jquery.bgiframe.min.js"> </script> 
+	  <script type="text/javascript" src="/site_media/js/jquery.autocomplete.js"> </script> 
+	  <script type="text/javascript" src="/site_media/js/tag_autocomplete.js"> </script>
+{% endblock %}
+
+{% block head %}Save Playlist{% endblock %}
+
+{% block sidebar %}
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{% endblock %}
+
+{% block content %} 
+
+	{% include 'satisfaction/playlist_save_form.html' %} 
+
+{% endblock %} 

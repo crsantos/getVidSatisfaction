@@ -1,0 +1,37 @@
+{% extends "satisfaction/base.html" %} 
+
+{% block title %} {{ title }} {% endblock %} 
+
+{% block head %} {{ heading }} {% endblock%} 
+
+{% block sidebar %}
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{% endblock %}
+
+{% block content %}
+
+	{% if suggestions %}
+	
+		{% load slugify %}
+		<h2>Suggested artists</h2><br />
+		<ul>
+			{% for artist in suggestions %}
+				<li>+ <a href="/tag/{{ artist.name|slugify }}">{{ artist.name }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<hr /><h2>Playlists</h2> <br />
+		{% if playlists %}
+
+			<p>By checking your lastfm profile, we found some playlists you may like on our database:</p><br />
+	
+			{% for playlist in playlists %}
+				<p><a href="/playlist/{{playlist.id}}"><img src="{{ playlist.playlist.image }}" width="15" height="15">{{ playlist.playlist.nome }}</a></p>
+			{% endfor %}
+		{% else %}
+		<p>No artists found for that lastfm username</p>
+		{% endif %}
+	{% else %}
+		<p>No suggestions found for that lastfm username</p>
+	{% endif %}
+{% endblock %}

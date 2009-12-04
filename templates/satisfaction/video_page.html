@@ -1,0 +1,27 @@
+{% extends "satisfaction/base_video.html" %} 
+
+{% block title %} {{title}} {% endblock %}
+
+{% block video %}
+	<div id="video" class="left">
+		<!-- <h2>video</h2>
+		<p>[ {{video.name}} ] - {{video.id}}</p> -->
+		<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/jOBCRGL0qvE&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/jOBCRGL0qvE&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>		
+	</div>
+	
+	<div id="video-info" class="left">
+		<h2>info</h2>
+		<p> <a href="/video/{{video.id}}">Link</a> </p>
+		<p> Views: {{video.views}}</p>
+		<p> Likes: {{video.likes}}</p>
+	</div>
+	
+{% endblock %}
+
+{% block wall %}
+	
+	{% for wallvideo in videos %}
+		<div class="video-small left text-right font36 bold"><a href="/video/{{wallvideo.id}}">{{wallvideo.id}}</a></div>
+	{% endfor %}
+	
+{% endblock %}

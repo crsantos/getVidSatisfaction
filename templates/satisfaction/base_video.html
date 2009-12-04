@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link href="/site_media/css/reset-fonts-grids.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/site_media/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="gmorais">
+	<!-- Date: 2009-12-03 -->
+</head>
+<body>
+	<div id="doc4" class="yui-t7">
+	   <div id="hd" role="banner"><h1></h1></div>
+	   <div id="bd" role="main">
+		<div class="yui-g center">
+			<div id="video-main">
+				{% block video %}
+					<div id="video" class="left">video</div>
+					<div id="video-info" class="left">info</div>
+				{% endblock %}
+
+				<div class="clear"></div>
+			</div>
+			<div id="video-wall">
+				{% block wall %}
+					<div class="video-small left text-right font36 bold">03</div>
+					<div class="video-small left text-right font36 bold">34</div>
+					<div class="video-small left text-right font36 bold">94</div>
+					<div class="video-small left text-right font36 bold">23</div>
+					<div class="video-small left text-right font36 bold">74</div>
+					<div class="video-small left text-right font36 bold">03</div>
+					<div class="video-small left text-right font36 bold">34</div>
+					<div class="video-small left text-right font36 bold">94</div>
+					<div class="video-small left text-right font36 bold">23</div>
+					<div class="video-small left text-right font36 bold">74</div>
+				{% endblock %}
+			</div>
+		</div>
+		</div>
+	   <div id="ft" role="contentinfo"><p></p></div>
+	</div>
+</body>
+</html>

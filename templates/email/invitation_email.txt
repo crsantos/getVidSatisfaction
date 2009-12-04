@@ -1,0 +1,9 @@
+Hi {{ name }},
+{{ sender }} invited you to join Spotifier,
+  a website where you can post and share your Spotify Playlists with friends!
+To accept the invitation, please click the link below:
+
+{{ link }}
+
+
+	-Spotify Team 

@@ -1,0 +1,221 @@
+html,body{
+	color: #ccc;
+	margin:0;
+	border:0;
+	padding:0;
+	font: 95% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	background-color: #2E7A2A;
+}
+
+body{
+}
+input { 
+	display: block;
+	margin: 5px;
+}
+
+form label {
+  display: block;
+}
+
+h1{
+	font-size: 2em;
+	font-weight:bold;
+	color: #FFF;
+}
+
+h2{
+	font-size: 1.5em;
+	font-weight:bold;
+}
+
+h3{
+	font-size: 1.1em;
+}
+
+#lastfm_chart td{
+	padding: 5px 10px;
+}
+
+#lastfm_chart tr:hover{
+	background-color: #DDD;
+}
+
+#content{
+	padding: 20px;
+/*	background-color: #78d800;*/
+}
+
+.pagination{
+/*	bottom: 0;*/
+/*	position: fixed;*/
+	font-size:85%;
+	margin: 20px auto;
+}
+
+.pag_item{
+	padding: 2px;
+}
+
+.friend{
+	font-size: 80%;
+}
+
+
+.friend_item{
+	background-color: #EEE;
+}
+.friend_item:hover{
+	background-color: #DDD;
+}
+#unavaliable{
+	background-color: #EEE;
+	color: #666;
+	padding: 3px;
+	opacity: 0.5;
+}
+
+#avaliable{
+	border: 1px solid #999;
+}
+
+#visited{
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+
+a:visited, a:link{
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover{
+	background-color: #DDD;
+	color: #333;
+}
+
+ul.playlists .edit { 
+  font-size: 70%; 
+}
+
+ul.playlists li{
+	margin-bottom:20px;
+	border: 1px solid #215731;
+	padding: 10px;
+	width:70%;
+	margin:10px auto;
+}
+
+ul.tags, ul.tags li { 
+	display: inline; 
+	margin: 0; 
+	padding: 0;
+	color: #555;
+	font-size:90%;
+}
+
+.comment { 
+	margin: 1em; 
+	padding: 10px 10px 10px 20px; 
+	border: 1px solid #DDD;
+	color: #DDD;
+} 
+
+#commentForm{
+/*	border: 1px dashed #999;*/
+	padding: 20px;
+}
+
+#tag-cloud { 
+  text-align: center;
+} 
+#tag-cloud a { 
+  margin: 0 0.2em; 
+} 
+.tag-cloud-0 { font-size: 100%; } 
+.tag-cloud-1 { font-size: 120%; } 
+.tag-cloud-2 { font-size: 140%; } 
+.tag-cloud-3 { font-size: 160%; } 
+.tag-cloud-4 { font-size: 180%; } 
+.tag-cloud-5 { font-size: 200%; } 
+
+
+#nav{
+	border: 1px solid #999;
+	padding: 5px 20px;
+	font-size:80%;
+	background: #14362B;/*url(../img/grad.png) repeat-x scroll top left;*/
+}
+#nav p, #nav a{
+	color: #FFF;
+}
+
+
+#doc2{
+}
+
+#ft,#hd{
+	text-align: center;
+/*	border: 1px solid #999;*/
+}
+
+#hd{
+	padding: 20px;
+/*	background-color: #969C23;*/
+}
+
+#ft{
+	font-size: 80%;
+}
+
+#hd h1{
+	font-size: 2em;
+}
+
+#sidebar{
+	color: #CCC;
+}
+
+.username{
+	font-weight: bold;
+	font-size:110%;	
+}
+.friends{
+	border: 1px dotted #999;
+
+}
+
+/*ul.messages { 
+	border: 1px dashed #000; 
+	margin: 1em 4em; 
+	padding: 1em; 
+} */
+
+.notification{
+	background:#FFFBE2 none repeat scroll 0 50%;
+	border:1px solid #FFE222;
+	font-weight:bold;
+	margin:1em 0;
+	padding:1em;
+}
+
+#login{
+	padding: 20px;
+	margin:auto;
+/*	background-color: #DDD;*/
+}
+
+.gravatar{
+	float: left;
+	margin: 5px 5px 5px 5px;
+	width:30px;
+/*	background-color: #DDD;*/
+}
+
+.comment_header{
+	float:left;
+	
+}
+
+.clear{
+	clear: both;
+}

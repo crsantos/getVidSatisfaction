@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+	<link rel="stylesheet" href="/site_media/css/style.css" type="text/css" />
+	<script type="text/javascript" src="/site_media/js/jquery.js"></script>
+
+	{% block external %}
+	<link rel="alternate" type="application/rss+xml" title="Spotifier | Recent Playlists"  href="/feeds/recent/" />
+	{% endblock %}
+
+</head>
+<body>
+	<div id="nav">
+		{% if user.is_authenticated %}
+			<p>
+				Welcome <a href="/user/{{ user.username }}">{{ user.username }}</a> | 
+				<a href="/save/">submit</a>		| 
+				<a href="/">home</a> 			| 
+				<a href="/logout/">logout</a>			
+			</p>
+		{% else %}
+			<p>Welcome anonymous | <a href="/">home</a>| <a href="/login/">login</a> | <a href="/register/">register</a></p>
+		{% endif %}
+	</div>
+	
+<div id="doc2" class="yui-t1">
+	<div id="hd" role="banner">
+	
+		 <h1> {% block head %}{% endblock %} </h1> 
+
+		{% if messages %} 
+			<div class="notification">
+				<ul class="messages"> 
+					{% for message in messages %} 
+					<li>{{ message }}</li> 
+					{% endfor %} 
+				</ul>
+			</div>
+		{% endif %}
+
+	</div>
+	<div id="bd" role="main">
+		<div id="yui-main">
+			<div class="yui-b"><div class="yui-g">
+				<div id="content">
+					{% block content %}{% endblock %}
+				</div>		
+			</div>
+		</div>
+	</div>
+	<div class="yui-b" id="sidebar">
+		
+		{% block sidebar %}{% endblock %}
+		
+	</div>
+	
+	</div>
+   <div id="ft" role="contentinfo">
+	
+		<p>Cenas &copy; 2009</p>
+	
+	</div>
+</div>
+</body>
+</html>

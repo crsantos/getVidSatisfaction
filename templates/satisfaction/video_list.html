@@ -1,0 +1,71 @@
+{% if videos %} 
+<ul class="videos"> 
+	{% for video in videos %} 
+	<li>
+		<a href="{{ video.url|escape }}" class="title">
+			{{ video.name }}</a> from <a href="/user/{{ video.user.username }}" class="user">{{ video.user.username }}</a>
+			
+			<div id="video-stuff">
+				<p>Likes: {{video.likes}}</p>
+				<p>Views: {{video.views}}</p>
+			</div>
+
+			<!-- {% if show_edit %}
+				<a href="/save/?url={{ video.url|urlencode }}"
+				class="edit">[edit]</a>
+			{% endif %} -->
+			
+			<br /> 
+			{% if show_tags %} 
+			Tags: 
+			{% if video.tag_set.all %}
+
+				{% load slugify %}
+		 
+			<ul class="tags">
+				{% for tag in video.tag_set.all %} 
+				<li><a href="/tag/{{ tag.name|slugify }}">{{ tag.name|safe }}</a></li> 
+				{% endfor %} 
+			</ul> 
+			{% else %} 
+			None. 
+			{% endif %} 
+			<br /> 
+			{% endif %} 
+			{% if show_user %} 
+			Posted by:
+			<a href="/user/{{ video.user.username|escape }}/" 
+			class="username"> 
+			{{ video.user.username }}</a> 
+			{% endif %} 
+		</li> 
+		{% endfor %} 
+	</ul> 
+	{% else %} 
+	<p>No videos found.</p> 
+	{% endif %}
+
+	
+<!-- PAGINATION -->
+
+{% if show_paginator %}
+	<div class="pagination">
+		{% if has_prev %}
+			<a href="?page={{ prev }}"><span class="pag_item" id="avaliable">&laquo; Previous<span></a>
+		{% else %}
+			<span id="unavaliable">&laquo; Previous</span>
+		{% endif %}
+		{% for p in pages %}
+			{% ifequal p page %}
+			<span class="pag_item" id="visited">{{ p }}</span>
+			{% else %}
+			<a href="?page={{ p }}"><span class="pag_item" id="avaliable">{{ p }}</span></a>
+			{% endifequal %}
+		{% endfor %}
+		{% if has_next %}
+			<a href="?page={{ next }}"><span class="pag_item" id="avaliable">Next &raquo;</span></a>
+		{% else %}
+			<span id="unavaliable">Next >></span>
+		{% endif %}
+	</div>
+{% endif %}
