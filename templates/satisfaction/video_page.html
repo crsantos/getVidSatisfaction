@@ -6,7 +6,15 @@
 	<div id="video" class="left">
 		<!-- <h2>video</h2>
 		<p>[ {{video.name}} ] - {{video.id}}</p> -->
-		<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/jOBCRGL0qvE&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/jOBCRGL0qvE&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>		
+		<a  
+			 href="{{ video.url }}"  
+			 style="display:block;width:520px;height:330px"  
+			 id="player"> 
+		</a> 
+	
+		<script>
+			flowplayer("player", "/site_media/swf/flowplayer-3.1.5.swf");
+		</script>
 	</div>
 	
 	<div id="video-info" class="left">

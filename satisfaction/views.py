@@ -73,7 +73,6 @@ def record(request):
 	# 			#url=form.cleaned_data['url'],
 	# 			categoria=form.cleaned_data['categoria']
 	# 	)
-	# 
 	# 	if not created:
 	# 		video.tag_set.clear()
 	# 	tag_names = form.cleaned_data['tags'].split(', ')
