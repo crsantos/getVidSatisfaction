@@ -16,11 +16,11 @@ import re
 from django import forms
 from django.utils.translation import ugettext as _
 from random import randint
-from cStringIO import StringIO
-from reportlab.pdfgen import canvas
+#from cStringIO import StringIO
+#from reportlab.pdfgen import canvas
 from django.core.cache import cache
 from django.utils.translation import check_for_language
-from django.contrib.sitemaps import ping_google
+#from django.contrib.sitemaps import ping_google
 #import twitter
 
 ugettext = lambda s:s
@@ -28,7 +28,7 @@ ugettext = lambda s:s
 ITEMS_PER_PAGE=5
 LAST_X_DAYS=10
 
-SERVER_IP='213.13.77.93'
+SERVER_IP='http://cenas.crsantos.info/'
 
 title= "Satisfaction"
 heading=_('Satisfaction')
@@ -96,7 +96,7 @@ def record(request):
 def save_video(request):
 	
 	if request.method == 'GET' and 'url' in request.GET:# and request.META.get('REMOTE_ADDR')==SERVER_IP:
-		url= "http://"+SERVER_IP+":6666/videos/"+request.GET.get('url')+".flv"
+		url= "http://"+SERVER_IP+"videos/"+request.GET.get('url')+".flv"
 		if len(url)>0:
 			video = Video.objects.create(
 									url=url,
