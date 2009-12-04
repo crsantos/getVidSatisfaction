@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, date
 import os
 
 
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -76,7 +77,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
 )
 
-ROOT_URLCONF = os.path.join(os.path.dirname(__file__)+'.urls'
+ROOT_URLCONF = 'satisfaction_site.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -90,6 +91,6 @@ INSTALLED_APPS = (
 	'django.contrib.contenttypes',
 	'django.contrib.sessions',
 	'django.contrib.sites',
-	os.path.join(os.path.dirname(__file__)+'.satisfaction',
+	'satisfaction_site.satisfaction',
 	'django.contrib.admin',
 	'django.contrib.comments',)
